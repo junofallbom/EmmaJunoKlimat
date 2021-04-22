@@ -1,0 +1,39 @@
+﻿<Window x:Class="EmmaJunoKlimat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmmaJunoKlimat"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="lstObservers" Margin="25,119,613,46" MouseDoubleClick="lstObservers_MouseDoubleClick"/>
+        <Button x:Name="btnAddObs" Content="Add Observer" HorizontalAlignment="Left" Margin="67,63,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.221,1.325" Click="btnAddObs_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="39,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="First"/><Run Language="sv-se" Text=" "/><Run Text="name"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="39,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="sv-se" Text="Last "/><Run Text="name"/></TextBlock>
+        <TextBox x:Name="txtFirstNameNewObs" HorizontalAlignment="Left" Margin="106,17,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="71"/>
+        <TextBox x:Name="txtLastNameNewObs" HorizontalAlignment="Left" Margin="106,40,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="71"/>
+        <Button x:Name="btnRemoveObs" Content="Remove Observer" HorizontalAlignment="Left" Margin="57,393,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.221,1.325" Click="btnRemoveObs_Click"/>
+        <Button x:Name="btnSaveNew" Content="Save New Observation" HorizontalAlignment="Left" Margin="228,372,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.221,1.325" Click="btnMakeObervation_Click"/>
+        <ListBox x:Name="lstObservations" Margin="555,119,26,47" MouseDoubleClick="lstObservations_MouseDoubleClick" SelectionChanged="lstObservations_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="322,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Make/Edit "/><Run Language="sv-se" Text="Obs"/><Run Text="ervations"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="555,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Obs"/><Run Text="ervations"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="25,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="sv-se" Text="Observers"/></TextBlock>
+        <Button x:Name="btnSaveEdit" Content="Save Editet Observation" HorizontalAlignment="Left" Margin="392,372,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.221,1.325" Click="btnSaveEdit_Click" />
+        <TextBlock HorizontalAlignment="Left" Margin="191,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="sv-se" Text="Area"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="257,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="sv-se" Text="Value"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="264,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="sv-se" Text="Unit"/></TextBlock>
+        <ComboBox x:Name="cmbUnit" HorizontalAlignment="Left" Margin="296,241,0,0" VerticalAlignment="Top" Width="47"/>
+        <TextBox x:Name="txtValue" HorizontalAlignment="Left" Margin="296,218,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
+        <ComboBox x:Name="cmbAreas" HorizontalAlignment="Left" Margin="234,271,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="257,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58"><Run Language="sv-se" Text="Category"/></TextBlock>
+        <ComboBox x:Name="cmbCategories" HorizontalAlignment="Left" Margin="194,129,0,0" VerticalAlignment="Top" Width="157" SelectionChanged="cmbCategories_SelectionChanged"/>
+        <ListBox x:Name="lstMeasurements"  Margin="359,119,264,147" />
+        <TextBlock HorizontalAlignment="Left" Margin="359,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="sv-se" Text="Measurements"/></TextBlock>
+        <Button x:Name="btnSaveMeasurements" Content="Save Measurement" HorizontalAlignment="Left" Margin="398,293,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.221,1.325" Click="btnSaveMeasurements_Click"/>
+        <RadioButton x:Name="rdbtnSummerSuit"  Content="Summer Suit" HorizontalAlignment="Left" Margin="246,167,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rdbtnWinterSuit" Content="Winter Suit" HorizontalAlignment="Left" Margin="246,188,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnUpdateCurrentMeash" Content="Update Current Measurement" HorizontalAlignment="Left" Margin="373,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.221,1.325" Click="btnUpdateCurrentMeash_Click"/>
+
+    </Grid>
+</Window>
